@@ -18,9 +18,9 @@ public class LoginPresenterIMPL implements LoginPresenter, OnLoginFinishListener
     @Override
     public void ValidarUsuario(String user, String password) {
         if (view != null) {
-            view.hideProgress();
+            view.showProgress();
         }
-      //  interactor.validarUser();
+        interactor.validarUser(user, password,this);
 
     }
 
